@@ -25,7 +25,7 @@ class ProxyController extends Controller
 
 		$config = $this->getParameter('ikadoc_kc_finder_config');
 		if (is_array($config)) {
-			if (is_null($_SESSION['KCFINDER'])) {
+			if (!array_key_exists('KCFINDER',$_SESSION) || is_null($_SESSION['KCFINDER'])) {
 				$_SESSION['KCFINDER'] = array();
 			}
 			foreach($config as $configName => $configElement) {
