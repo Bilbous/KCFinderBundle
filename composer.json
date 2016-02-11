@@ -1,0 +1,32 @@
+{
+    "name": "ikadoc/kcfinder-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a KCFinder integration for CKEditor for your Symfony Project.",
+    "keywords": [ "ckeditor", "kcfinder" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yannick Cenatiempo",
+            "email": "ycenatiempo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",      
+        "sunhater/kcfinder": "dev-master#b645d2a81e647d63780c238b130593e32b4d95a9",
+        "symfony/dependency-injection": "~2.2|~3.0",
+        "symfony/framework-bundle": "~2.2|~3.0"
+    },
+    "require-dev": {
+        "symfony/yaml": "^2.0.5|~3.0",
+        "twig/twig": "~1.12"
+    },
+    "suggest": {
+        "twig/twig": "Allows to use Twig templates"
+    },
+    "autoload": {
+        "psr-4": { "Ikadoc\\KCFinderBundle\\": "" }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

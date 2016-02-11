@@ -1,0 +1,6 @@
+KCFinder_browse:
+    path:  /kcfinder/{file}
+    defaults:
+        _controller: "IkadocKCFinderBundle:Proxy:proxy"
+    requirements:
+        file: "favico\\.ico|browse\\.php|js_localize\\.php|upload\\.php|css/index\\.php|js/index\\.php|themes/[^\\.]*/css\\.php|themes/[^\\.]*/js\\.php|themes/[^\\.]*/img/[^\\.]*\\.(png|gif|jpg)"
