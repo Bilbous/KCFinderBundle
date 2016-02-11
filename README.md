@@ -10,7 +10,7 @@ This package require [kcfinder] but the composer can't load it if it's on requir
 
 ``` php
 // composer.json
-"sunhater/kcfinder": "dev-master",
+"sunhater/kcfinder": "dev-master"
 ```
 
         
