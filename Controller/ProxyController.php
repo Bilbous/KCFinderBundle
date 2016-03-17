@@ -12,6 +12,7 @@ class ProxyController extends Controller
 	{
 		$pathinfo = pathinfo($file);
 		$path = $pathinfo['dirname'];
+		$fileName = $pathinfo['basename'];
 		if ('.' == $path) {
 			$path = $this->getParameter('ikadoc_kc_finder_path');
 		} else {
@@ -33,11 +34,14 @@ class ProxyController extends Controller
 			}
 		}
 
+		$previousscriptFileName = $_SERVER['SCRIPT_FILENAME'];
 		$previousCwd = getcwd();
 		chdir($path);
+		$_SERVER['SCRIPT_FILENAME'] = $path . '/' . $fileName;
 
 		require $pathinfo['basename'];
 
+		$_SERVER['SCRIPT_FILENAME'] = $previousscriptFileName;
 		chdir($previousCwd);
 
 		ob_end_flush();
